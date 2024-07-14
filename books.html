@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Library Search</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+        .open{
+            color: orange;
+        }
+        .library{
+            color: black;
+        }
+        .search{
+            color: orange;
+        }
+        ::placeholder{
+            text-align: center;
+        }
+        .book {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        #searchQuery{
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            width: 250px;
+            height: 30px;
+            border-color: orange;
+            border-style: solid;
+        }
+        .search-button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        border-color: orange;
+        border-style: solid;
+        color: black;
+        background-color: white;
+        cursor: pointer; 
+        transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+
+        .search-button:hover {
+        background-color: orange;
+        border-color: orange;
+        }
+
+        .search-button:active {
+        background-color: white;
+        border-color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <h1><span class="open">Open</span> <span class="library">Library</span> <span class="search">Search</span></h1>
+    <input type="text" id="searchQuery" placeholder="Enter the search query here!"><br><br>
+    <button onclick="searchBooks()" class="search-button">Search</button>
+    <div id="results"></div>
+
+    <script src="books.js"></script>
+</body>
+</html>
